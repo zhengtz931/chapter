@@ -29,6 +29,7 @@ public class CategoryService {
     @Autowired
     CategoryRepository categoryRepo;
 
+    public  List<Category> findAll(){return categoryRepo.findAll(); }
     /**
      * 根据主键获取实体，常用
      */

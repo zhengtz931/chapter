@@ -6,7 +6,28 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4c9ff66-f6a6-4a59-9e94-f1dcc503ad1a" name="Default Changelist" comment="" />
+    <list default="true" id="41297d5b-b566-4ddf-8d0d-b767ce24f785" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/nenu/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/nenu/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/nenu/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/nenu/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/nenu/domain/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/nenu/domain/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/nenu/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/nenu/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/nav.tag" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/nav.tag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/post/form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/post/form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/post/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/post/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/chapter03-0.1.0.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/chapter03-0.1.0.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/chapter03-0.1.0/WEB-INF/classes/cn/edu/nenu/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/chapter03-0.1.0/WEB-INF/classes/cn/edu/nenu/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/chapter03-0.1.0/WEB-INF/classes/cn/edu/nenu/controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/chapter03-0.1.0/WEB-INF/classes/cn/edu/nenu/controller/PostController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/chapter03-0.1.0/WEB-INF/classes/cn/edu/nenu/service/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/chapter03-0.1.0/WEB-INF/classes/cn/edu/nenu/service/CategoryService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/chapter03-0.1.0/WEB-INF/tags/nav.tag" beforeDir="false" afterPath="$PROJECT_DIR$/target/chapter03-0.1.0/WEB-INF/tags/nav.tag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/chapter03-0.1.0/WEB-INF/views/post/form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/chapter03-0.1.0/WEB-INF/views/post/form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/chapter03-0.1.0/WEB-INF/views/post/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/chapter03-0.1.0/WEB-INF/views/post/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/nenu/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/nenu/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/nenu/controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/nenu/controller/PostController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/nenu/service/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/nenu/service/CategoryService.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +42,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -40,6 +64,7 @@
   </component>
   <component name="ProjectId" id="1diMO6Ou0Pjj7aJcg9ltx6jSQUr" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/post" />
@@ -143,17 +168,31 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d4c9ff66-f6a6-4a59-9e94-f1dcc503ad1a" name="Default Changelist" comment="" />
+      <changelist id="41297d5b-b566-4ddf-8d0d-b767ce24f785" name="Default Changelist" comment="" />
       <created>1592903424194</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592903424194</updated>
       <workItem from="1592903427421" duration="12788000" />
       <workItem from="1592990209299" duration="16703000" />
+      <workItem from="1593258984682" duration="8981000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

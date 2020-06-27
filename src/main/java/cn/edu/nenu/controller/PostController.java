@@ -2,10 +2,15 @@ package cn.edu.nenu.controller;
 
 import cn.edu.nenu.config.Constants;
 import cn.edu.nenu.config.HttpServlet;
+import cn.edu.nenu.domain.Category;
 import cn.edu.nenu.domain.Dictionary;
 import cn.edu.nenu.domain.Post;
+import cn.edu.nenu.domain.User;
+import cn.edu.nenu.repository.CategoryRepository;
+import cn.edu.nenu.service.CategoryService;
 import cn.edu.nenu.service.DictionaryService;
 import cn.edu.nenu.service.PostService;
+import cn.edu.nenu.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
@@ -18,8 +23,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.ServletRequest;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import static cn.edu.nenu.config.Constants.PAGE_SIZE;
 
@@ -70,7 +80,10 @@ public class PostController {
 
     @Autowired
     PostService dictService;
-
+    @Autowired
+    CategoryService categoryService ;
+    @Autowired
+    UserService userService;
     /**
      * 列表页面
      */
@@ -93,6 +106,8 @@ public class PostController {
     @GetMapping(value = "create")
     public String createForm(Model model) {
 
+        List<Category> list = categoryService.findAll();
+        model.addAttribute("categories",list);
         model.addAttribute("dict", new Post());
         model.addAttribute("action", "create");
         return "post/form";
@@ -102,7 +117,18 @@ public class PostController {
      * @author zhangyj, 2020.05.21
      */
     @PostMapping(value = "create")
-    public String create(@Valid Post newDict, RedirectAttributes redirectAttributes) {
+    public String create(@Valid Post newDict, String category, RedirectAttributes redirectAttributes, HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        String username = (String) session.getAttribute("username");
+          User user =  userService.findByUsername(username);
+        newDict.setCreator(user);
+
+
+        Set<Category> list = newDict.getCategories();
+        Category cate = categoryService.findOne(Integer.valueOf(category));
+        Set<Category> categories = new HashSet<>();
+        categories.add(cate);
+        newDict.setCategories(categories);
         float sort = dictService.getMaxSort();
         newDict.setSort(sort+1);
         newDict.setStatus(Constants.Status.ENABLE);
@@ -126,9 +152,11 @@ public class PostController {
      * 页面编辑后，保存
      */
     @PostMapping(value = "update")
-    public String update(@Valid Post dict, RedirectAttributes redirectAttributes){
+    public String update(@Valid Post dict, RedirectAttributes redirectAttributes,Model model){
         Long pkId = dict.getId();
         Post newDict = dictService.findOne(pkId);
+        List<Category> list = categoryService.findAll();
+        model.addAttribute("categories",list);
         newDict.setContent(dict.getContent());
         newDict.setCreatedAt(dict.getCreatedAt());
         newDict.setCreator(dict.getCreator());

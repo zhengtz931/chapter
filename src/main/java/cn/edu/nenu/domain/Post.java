@@ -80,6 +80,7 @@ public class Post {
     private Constants.Status status;//属性状态
     @Column(length = 64,nullable = false)
     private float sort=0;//属性排序
+
 }
 
 

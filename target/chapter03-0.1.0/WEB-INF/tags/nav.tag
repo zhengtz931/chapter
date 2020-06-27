@@ -32,7 +32,17 @@
                 <li><a href="${ctx}/post">文章管理</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="${ctx}/login">登录</a></li>
+                <% String username=(String)session.getAttribute("username");
+                    %>
+                <c:if test="${empty username}">
+                    <li><a href="${ctx}/login">登录</a></li>
+                </c:if>
+
+                <c:if test="${not empty username}">
+                   <li><%=request.getSession().getAttribute("username") %></li>
+                </c:if>
+
+
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                     <ul class="dropdown-menu">

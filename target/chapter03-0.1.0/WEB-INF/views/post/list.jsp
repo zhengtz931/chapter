@@ -69,6 +69,7 @@
             <th>状态</th>
             <th>最后修改时间</th>
             <th>栏目名称</th>
+            <th>创建者</th>
             <th>管理</th></tr></thead>
         <tbody>
         <c:forEach items="${dicts.content}" var="dict" varStatus="idxStatus">
@@ -80,6 +81,7 @@
                 <td>${dict.status.desc}</td>
                 <td>${dict.lastModifiedAt}</td>
                 <td>${dict.title}</td>
+                <td>${dict.creator}</td>
                 <td>
                     <a href="${ctx}/post/update/${dict.id}">编辑</a>
 <%--                    <a href="#" class="cla_edit" id="${dict.id}">编辑</a>--%>

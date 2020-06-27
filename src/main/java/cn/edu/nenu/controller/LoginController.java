@@ -12,6 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.ServletRequest;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 /**
  * LoginController Class
  *
@@ -65,7 +69,7 @@ public class LoginController {
     public String login(@RequestParam(value = "username") String username,
                         @RequestParam(value = "password") String password,
                         //@RequestBody String json,
-                        //ServletRequest request,
+                        HttpServletRequest request,
                         Model model){
         log.info("login?method=post");
         //String username = request.getParameter("username");
@@ -82,6 +86,8 @@ public class LoginController {
             if(password.equals(user.getPassword())){
                //登陆成功，返回成功信息
                 message ="用户登录成功";
+                HttpSession session = request.getSession();
+                session.setAttribute("username",username);
                 model.addAttribute("username",username);
                 return "index";
             }else{
@@ -191,7 +197,14 @@ public class LoginController {
             //web-inf/views/+ return 字符串 + .jsp
         //}
     }
+    @RequestMapping("/logout")
+    public String logout(HttpServletRequest request)
+    {
 
+        HttpSession session1 = request.getSession();
+        session1.invalidate();
+        return "index";
+    }
     //public ModelAndView login(ServletRequest request){
     //    String username = request.getParameter("username");
     //    ModelAndView mv = new ModelAndView("loginsuccess");
